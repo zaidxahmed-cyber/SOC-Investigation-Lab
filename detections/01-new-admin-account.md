@@ -15,7 +15,7 @@ Detects a local or domain account that is created and then added to a privileged
 - Event ID 4732 – A member was added to a security-enabled local group
 
 ## Detection Logic
-​```kql
+```kql
 SecurityEvent
 | where EventID == 4720
 | project AccountCreatedTime = TimeGenerated, NewAccount = TargetAccount, Creator = SubjectAccount, Computer
@@ -27,7 +27,7 @@ SecurityEvent
 ) on Computer
 | where AdminAddTime - AccountCreatedTime between (0min .. 5min)
 | project AccountCreatedTime, NewAccount, Creator, AdminAddTime, GroupAddedTo, Computer
-​```
+```
 
 The rule correlates Event 4720 and 4732 on the same host within a 5-minute window. Correlation is the point: account creation alone is normal (onboarding), and admin group changes alone are normal (role changes). The two happening back-to-back is the anomaly.
 
@@ -41,10 +41,10 @@ The rule correlates Event 4720 and 4732 on the same host within a 5-minute windo
 
 ## Validation
 Simulated by creating a local account and adding it to Administrators:
-​```cmd
+```cmd
 net user hacker Passw0rd! /add
 net localgroup administrators hacker /add
-​```
+```
 The rule fired and generated Incident ID 1 in Microsoft Sentinel / Defender XDR.
 
 ![Incident 01](../incident-01.png)
