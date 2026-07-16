@@ -42,9 +42,9 @@ wevtutil cl Security
 ```
 Event 1102 was written and forwarded to Sentinel. The scheduled analytics rule fired and generated **Incident ID 23** in Microsoft Sentinel / Defender XDR, with the host (DESKTOP-NV93RGT) and account correctly mapped as entities.
 
-![Detection query and result](../03-detection-query.png)
+![Detection query and result](../screenshots/03-detection-query.png)
 
-![Incident 23 attack story](../03-incident.png)
+![Incident 23 attack story](../screenshots/03-incident.png)
 
 ## Response Runbook
 1. Confirm whether the log clear was authorized. Check change tickets and ask the responsible admin.

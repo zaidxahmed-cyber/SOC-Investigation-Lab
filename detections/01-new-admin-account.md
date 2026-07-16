@@ -47,7 +47,7 @@ net localgroup administrators hacker /add
 ```
 The rule fired and generated Incident ID 1 in Microsoft Sentinel / Defender XDR.
 
-![Incident 01](../incident-01.png)
+![Incident 01](../screenshots/incident-01.png)
 
 ## Response Runbook
 1. Confirm whether the account creation was authorized (check change tickets).

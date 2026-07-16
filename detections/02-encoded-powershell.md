@@ -60,9 +60,9 @@ powershell.exe -enc <encoded_string>
 ```
 Sysmon Event 1 captured the process create with the full encoded command line. The scheduled analytics rule fired and generated **Incident ID 22** in Microsoft Sentinel / Defender XDR, with the host (DESKTOP-NV93RGT) and account (LAB\Administrator) correctly mapped as entities.
 
-![Detection query and result](../02-detection-query.png)
+![Detection query and result](../screenshots/02-detection-query.png)
 
-![Incident 22 attack story](../02-incident.png)
+![Incident 22 attack story](../screenshots/02-incident.png)
 
 ## Response Runbook
 1. Decode the base64 command line to see what actually ran.
