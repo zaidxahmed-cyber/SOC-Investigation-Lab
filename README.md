@@ -15,5 +15,6 @@ A hands-on detection engineering lab demonstrating blue-team skills: attack simu
 | # | Name | Tactic | Technique |
 |---|------|--------|-----------|
 | 01 | New Account Created and Promoted to Admin | Persistence, Privilege Escalation | T1136.001, T1098 |
+| 02 | Encoded PowerShell Execution | Execution | T1059.001 |
 
 _More detections in progress._
