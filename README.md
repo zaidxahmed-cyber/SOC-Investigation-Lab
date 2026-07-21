@@ -38,4 +38,5 @@ Full investigation writeups demonstrating end-to-end triage of detected incident
 ## Documentation
 
 - [Project Overview](docs/project-overview.md) – complete walkthrough of the environment, networking, telemetry pipeline, and methodology
+- [AI-Assisted Investigation Experiment](docs/ai-investigation-experiment.md) – testing an LLM as a triage assistant across all five detections, with analyst critique of where it succeeds and fails
 - [Coverage Matrix](coverage-matrix.md) – detections mapped to MITRE ATT&CK, plus roadmap
