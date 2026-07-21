@@ -3,6 +3,9 @@
 A hands-on detection engineering lab demonstrating blue-team skills: attack simulation, detection authoring, incident investigation, and MITRE ATT&CK mapping.
 
 ## Architecture
+
+![Network Diagram](docs/network-diagram.svg)
+
 - **SIEM:** Microsoft Sentinel (Log Analytics workspace)
 - **Endpoints:** Windows Server 2022 domain controller + Windows 11 domain-joined workstation (VMware Workstation)
 - **Telemetry:** Sysmon (SwiftOnSecurity config), PowerShell script-block logging, and Windows Security events, forwarded to Sentinel via Azure Monitor Agent over Azure Arc
