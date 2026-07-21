@@ -2,6 +2,8 @@
 
 A full walkthrough of the environment, how it was built, how the pieces connect, and what has been done. This is the master reference for the project.
 
+![Network Diagram](network-diagram.svg)
+
 ## 1. What This Project Is
 
 This is a hands-on Security Operations Center (SOC) detection engineering lab. It exists to practice the full defensive workflow the way it happens in a real SOC: an attacker performs a technique, that activity produces logs, the logs are centralized in a SIEM, and a custom detection rule catches the activity and raises an incident that an analyst investigates.
