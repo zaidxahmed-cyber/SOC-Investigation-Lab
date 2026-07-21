@@ -169,10 +169,11 @@ Five detections are live, deliberately spanning both attack surfaces.
 
 ## 9. What Comes Next (Roadmap)
 
-The detection set (five detections) and the incident-investigation reports (one per detection) are complete. Remaining work:
+The detection set (five detections), the incident-investigation reports (one per detection), and the AI-assisted investigation experiment are complete. Remaining work:
 
-- **AI investigation layer**: feed raw logs to a language model, have it draft an investigation summary and response plan, then verify and critique its output — framed as an AI-versus-analyst comparison.
-- **Final polish**: a network diagram and repository presentation.
+- **Final polish**: repository presentation and any further hardening.
+
+See [ai-investigation-experiment.md](ai-investigation-experiment.md) for the AI triage study: each detection's raw event was given to an LLM acting as a SOC analyst, and its output was critiqued against known ground truth.
 
 ## 10. Design Principles
 
