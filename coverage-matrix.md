@@ -18,5 +18,5 @@ These five detections form the complete detection set for this lab. They were ch
 
 - **Detection set:** complete (5 detections, above).
 - **Incident reports:** complete — a full investigation writeup for each detection, in [`incident-reports/`](incident-reports/), covering timeline, evidence, assessment, and response.
-- **AI-assisted investigation experiment:** planned — an LLM drafts an investigation summary from raw logs, then an analyst verifies and critiques it (AI-versus-analyst framing).
-- **Final polish:** planned — network diagram and repository presentation.
+- **AI-assisted investigation experiment:** complete — an LLM was given each detection's raw event as a SOC analyst and its output critiqued against ground truth. See [ai-investigation-experiment.md](docs/ai-investigation-experiment.md).
+- **Final polish:** repository presentation.
