@@ -16,7 +16,7 @@ These five detections form the complete detection set for this lab. They were ch
 
 ## Roadmap
 
-With the detection set complete, the next phases of the project are:
-- Full incident-investigation reports (timeline, triage, and conclusion for selected incidents)
-- An AI-assisted investigation experiment (LLM-drafted investigation summary, analyst-verified)
-- Final repository polish, including a network diagram
+- **Detection set:** complete (5 detections, above).
+- **Incident reports:** complete — a full investigation writeup for each detection, in [`incident-reports/`](incident-reports/), covering timeline, evidence, assessment, and response.
+- **AI-assisted investigation experiment:** planned — an LLM drafts an investigation summary from raw logs, then an analyst verifies and critiques it (AI-versus-analyst framing).
+- **Final polish:** planned — network diagram and repository presentation.
