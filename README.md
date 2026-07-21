@@ -17,6 +17,7 @@ A hands-on detection engineering lab demonstrating blue-team skills: attack simu
 | 01 | New Account Created and Promoted to Admin | Persistence, Privilege Escalation | T1136.001, T1098 |
 | 02 | Encoded PowerShell Execution | Execution | T1059.001 |
 | 03 | Security Log Cleared | Defense Evasion | T1070.001 |
+| 04 | Brute Force (Multiple Failed Logons) | Credential Access | T1110 |
 | 05 | Kerberoasting (Service Ticket RC4 Request) | Credential Access | T1558.003 |
 
-_More detections in progress._
+These five detections are the complete detection set for this lab, spanning endpoint execution, defense evasion, persistence/privilege escalation, and identity/credential attacks. See the [coverage matrix](coverage-matrix.md) for full detail and the project roadmap.
