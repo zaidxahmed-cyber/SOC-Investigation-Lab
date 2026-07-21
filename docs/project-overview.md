@@ -121,7 +121,7 @@ Each finished detection lives as its own document in the `detections/` folder, a
 
 ## 7. Detections Built So Far
 
-Four detections are currently live, deliberately spanning both attack surfaces.
+Five detections are live, deliberately spanning both attack surfaces.
 
 ### Detection 01 — New Account Created and Promoted to Admin
 - Technique: T1136.001 (Create Account) and T1098 (Account Manipulation)
@@ -148,7 +148,12 @@ Four detections are currently live, deliberately spanning both attack surfaces.
 - Validation: Executed for real from Kali using Impacket, authenticating as a low-privilege domain user to roast a planted service account. The attack produced the crackable ticket hash and generated a high-severity incident tracing back to the attacker's IP.
 - Surface: Identity / domain controller (DC01, attacked from Kali). This is the most technically involved detection in the lab.
 
-(Detection 04, a failed-logon brute-force detection, was intentionally skipped for now and will be added later; the numbering reflects the MITRE-aligned order rather than build order.)
+### Detection 04 — Brute Force (Multiple Failed Logons)
+- Technique: T1110 (Brute Force)
+- Idea: A single failed logon is normal; many failures from one source in a short time is a password-guessing attack. The pattern, not any single event, is the signal.
+- Logic: Aggregates failed logons (Security Event 4625) by source IP and alerts when one source produces five or more failures within a five-minute window. Surfaces the attacker's source IP as the key investigative pivot.
+- Validation: Executed for real from Kali using NetExec, spraying wrong passwords at a domain user. Eight rapid failures from one source were aggregated into a single finding tracing back to the attacker's IP.
+- Surface: Identity / domain controller (DC01, attacked from Kali).
 
 ## 8. What Has Been Accomplished
 
@@ -157,15 +162,15 @@ Four detections are currently live, deliberately spanning both attack surfaces.
 - A full cloud telemetry pipeline: agents, Azure Arc onboarding, data collection rules, a Log Analytics workspace, and Microsoft Sentinel.
 - Four working detections spanning endpoint execution, defense evasion, persistence/privilege escalation, and identity credential theft, each mapped to MITRE ATT&CK and fully documented.
 - A real, end-to-end identity attack (Kerberoasting) executed from the attacker machine and caught by a custom detection.
-- A documented, repeatable methodology and an organized repository (per-detection writeups, coverage matrix, screenshots, and this architecture reference).
+- A full incident-investigation report for each detection, documenting timeline, evidence, assessment, and recommended response — demonstrating triage and analytical reasoning, not just rule authoring.
+- A documented, repeatable methodology and an organized repository (per-detection writeups, incident reports, coverage matrix, screenshots, and this architecture reference).
 
 ## 9. What Comes Next (Roadmap)
 
-- **Detection 04 — Brute Force** (T1110): detect repeated failed logons (Security Event 4625).
-- **Detection 06**: an additional technique such as scheduled-task persistence (T1053.005) or a further domain attack.
-- **Incident reports**: two to three full investigation writeups that take an incident, build a timeline, and document triage from alert to conclusion. These show investigative thinking, not just rule-writing.
+The detection set (five detections) and the incident-investigation reports (one per detection) are complete. Remaining work:
+
 - **AI investigation layer**: feed raw logs to a language model, have it draft an investigation summary and response plan, then verify and critique its output — framed as an AI-versus-analyst comparison.
-- **Final polish**: a network diagram, a cleaned-up README, and repository presentation.
+- **Final polish**: a network diagram and repository presentation.
 
 ## 10. Design Principles
 
