@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="900" height="720" fill="#0d1117"/>
+  <text x="450" y="40" fill="#e6edf3" font-size="22" font-weight="700" text-anchor="middle">SOC Investigation Lab — Architecture</text>
+  <text x="450" y="64" fill="#8b949e" font-size="13" text-anchor="middle">Attack simulation to cloud SIEM detection</text>
+
+  <!-- ================= CLOUD LAYER ================= -->
+  <rect x="250" y="90" width="400" height="150" rx="10" fill="#161b22" stroke="#1f6feb" stroke-width="1.5"/>
+  <text x="450" y="112" fill="#58a6ff" font-size="14" font-weight="700" text-anchor="middle">Microsoft Azure Cloud</text>
+
+  <rect x="275" y="128" width="160" height="44" rx="6" fill="#0d1117" stroke="#30363d"/>
+  <text x="355" y="150" fill="#e6edf3" font-size="12" font-weight="600" text-anchor="middle">Log Analytics</text>
+  <text x="355" y="165" fill="#8b949e" font-size="11" text-anchor="middle">Workspace</text>
+
+  <rect x="465" y="128" width="160" height="44" rx="6" fill="#0d1117" stroke="#3fb950"/>
+  <text x="545" y="150" fill="#e6edf3" font-size="12" font-weight="600" text-anchor="middle">Microsoft Sentinel</text>
+  <text x="545" y="165" fill="#8b949e" font-size="11" text-anchor="middle">KQL analytics rules</text>
+
+  <rect x="370" y="190" width="160" height="36" rx="6" fill="#0d1117" stroke="#30363d"/>
+  <text x="450" y="212" fill="#e6edf3" font-size="11" text-anchor="middle">Data Collection Rules</text>
+
+  <path d="M355 172 L355 190 L410 190" fill="none" stroke="#484f58" stroke-width="1.5"/>
+  <path d="M490 226 L490 208 L465 208" fill="none" stroke="#484f58" stroke-width="1.5"/>
+  <path d="M435 150 L465 150" fill="none" stroke="#484f58" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ================= ARC BRIDGE ================= -->
+  <rect x="360" y="270" width="180" height="40" rx="6" fill="#161b22" stroke="#a371f7" stroke-width="1.5"/>
+  <text x="450" y="288" fill="#d2a8ff" font-size="12" font-weight="600" text-anchor="middle">Azure Arc + Monitor Agent</text>
+  <text x="450" y="303" fill="#8b949e" font-size="10" text-anchor="middle">onboards on-prem VMs to Azure</text>
+
+  <path d="M450 270 L450 226" fill="none" stroke="#a371f7" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="466" y="252" fill="#8b949e" font-size="10">telemetry</text>
+
+  <!-- ================= LAB NETWORK BAR ================= -->
+  <rect x="60" y="360" width="780" height="34" rx="6" fill="#132a1a" stroke="#3fb950" stroke-width="1.5"/>
+  <text x="450" y="382" fill="#3fb950" font-size="13" font-weight="700" text-anchor="middle">LAB Network — VMnet2 (host-only, isolated) — 192.168.100.0/24</text>
+
+  <!-- pipeline arrow from lab up to arc -->
+  <path d="M450 360 L450 310" fill="none" stroke="#484f58" stroke-width="1.5"/>
+
+  <!-- ================= VMs ================= -->
+  <!-- DC01 -->
+  <rect x="90" y="450" width="200" height="120" rx="10" fill="#161b22" stroke="#f0883e" stroke-width="1.5"/>
+  <text x="190" y="476" fill="#f0883e" font-size="14" font-weight="700" text-anchor="middle">DC01</text>
+  <text x="190" y="496" fill="#e6edf3" font-size="11" text-anchor="middle">Windows Server 2022</text>
+  <text x="190" y="512" fill="#8b949e" font-size="11" text-anchor="middle">Domain Controller / DNS</text>
+  <text x="190" y="528" fill="#8b949e" font-size="11" text-anchor="middle">domain: lab.local</text>
+  <text x="190" y="550" fill="#58a6ff" font-size="11" font-weight="600" text-anchor="middle">192.168.100.10</text>
+
+  <!-- WIN11 -->
+  <rect x="350" y="450" width="200" height="120" rx="10" fill="#161b22" stroke="#58a6ff" stroke-width="1.5"/>
+  <text x="450" y="476" fill="#58a6ff" font-size="14" font-weight="700" text-anchor="middle">WIN11</text>
+  <text x="450" y="496" fill="#e6edf3" font-size="11" text-anchor="middle">Windows 11 Enterprise</text>
+  <text x="450" y="512" fill="#8b949e" font-size="11" text-anchor="middle">Domain-joined workstation</text>
+  <text x="450" y="528" fill="#8b949e" font-size="11" text-anchor="middle">endpoint / execution surface</text>
+  <text x="450" y="550" fill="#58a6ff" font-size="11" font-weight="600" text-anchor="middle">192.168.100.20</text>
+
+  <!-- KALI -->
+  <rect x="610" y="450" width="200" height="120" rx="10" fill="#161b22" stroke="#f85149" stroke-width="1.5"/>
+  <text x="710" y="476" fill="#f85149" font-size="14" font-weight="700" text-anchor="middle">Kali-Attacker</text>
+  <text x="710" y="496" fill="#e6edf3" font-size="11" text-anchor="middle">Kali Linux</text>
+  <text x="710" y="512" fill="#8b949e" font-size="11" text-anchor="middle">attacker machine</text>
+  <text x="710" y="528" fill="#8b949e" font-size="11" text-anchor="middle">Impacket, NetExec</text>
+  <text x="710" y="550" fill="#58a6ff" font-size="11" font-weight="600" text-anchor="middle">192.168.100.30</text>
+
+  <!-- connect VMs to lab bar -->
+  <path d="M190 450 L190 394" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+  <path d="M450 450 L450 394" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+  <path d="M710 450 L710 394" fill="none" stroke="#3fb950" stroke-width="1.5"/>
+
+  <!-- attack arrow Kali -> DC01 -->
+  <path d="M610 500 C 470 440, 330 440, 290 500" fill="none" stroke="#f85149" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrowred)"/>
+  <text x="450" y="432" fill="#f85149" font-size="11" font-weight="600" text-anchor="middle">attacks: Kerberoasting, brute force</text>
+
+  <!-- ================= NAT NETWORK ================= -->
+  <rect x="60" y="620" width="780" height="34" rx="6" fill="#1c2333" stroke="#6e7681" stroke-width="1.5"/>
+  <text x="450" y="642" fill="#8b949e" font-size="13" font-weight="700" text-anchor="middle">NAT Network — internet access (updates, Azure connectivity)</text>
+
+  <path d="M190 570 L190 620" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+  <path d="M450 570 L450 620" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+  <path d="M710 570 L710 620" fill="none" stroke="#6e7681" stroke-width="1.2"/>
+
+  <!-- legend -->
+  <text x="60" y="690" fill="#8b949e" font-size="11">Green = isolated lab traffic &amp; telemetry path   ·   Red dashed = attack traffic   ·   Grey = internet</text>
+  <text x="60" y="708" fill="#6e7681" font-size="10">Windows VMs forward Security + Sysmon + PowerShell logs via Azure Monitor Agent. Kali is powered on only while attacking (16 GB host RAM).</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#484f58"/>
+    </marker>
+    <marker id="arrowred" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#f85149"/>
+    </marker>
+  </defs>
+</svg>
