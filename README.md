@@ -27,6 +27,10 @@ These five detections are the complete detection set for this lab, spanning endp
 Full investigation writeups demonstrating end-to-end triage of detected incidents: timeline reconstruction, evidence analysis, threat assessment, and response recommendations.
 
 - [01 – Kerberoasting Investigation](incident-reports/01-kerberoasting-investigation.md)
+- [02 – Brute Force Investigation](incident-reports/02-brute-force-investigation.md)
+- [03 – Encoded PowerShell Investigation](incident-reports/03-encoded-powershell-investigation.md)
+- [04 – Security Log Cleared Investigation](incident-reports/04-security-log-cleared-investigation.md)
+- [05 – New Admin Account Investigation](incident-reports/05-new-admin-account-investigation.md)
 
 ## Documentation
 
