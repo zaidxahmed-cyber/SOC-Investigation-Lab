@@ -21,3 +21,14 @@ A hands-on detection engineering lab demonstrating blue-team skills: attack simu
 | 05 | Kerberoasting (Service Ticket RC4 Request) | Credential Access | T1558.003 |
 
 These five detections are the complete detection set for this lab, spanning endpoint execution, defense evasion, persistence/privilege escalation, and identity/credential attacks. See the [coverage matrix](coverage-matrix.md) for full detail and the project roadmap.
+
+## Incident Reports
+
+Full investigation writeups demonstrating end-to-end triage of detected incidents: timeline reconstruction, evidence analysis, threat assessment, and response recommendations.
+
+- [01 – Kerberoasting Investigation](incident-reports/01-kerberoasting-investigation.md)
+
+## Documentation
+
+- [Project Overview](docs/project-overview.md) – complete walkthrough of the environment, networking, telemetry pipeline, and methodology
+- [Coverage Matrix](coverage-matrix.md) – detections mapped to MITRE ATT&CK, plus roadmap
